@@ -94,61 +94,8 @@
         var card = d3.select(this);
         var flipped = card.classed(clazz);
 
-        d3.selectAll('.card').classed(clazz, false);
-
-        if (!flipped) {
-            card.classed(clazz, true);
-        }
+        card.classed(clazz, !flipped);
     });
 </script>
-
-    <!--<div class="cards">-->
-        <!--<div class="card card_initial">-->
-            <!--<div class="front"></div>-->
-            <!--<div class="back"></div>-->
-        <!--</div>-->
-        <!--<div class="card card_initial">-->
-            <!--<div class="front"></div>-->
-            <!--<div class="back"></div>-->
-        <!--</div>-->
-        <!--<div class="card card_initial">-->
-            <!--<div class="front"></div>-->
-            <!--<div class="back"></div>-->
-        <!--</div>-->
-
-        <!--<div class="card card_to-be-played">-->
-            <!--<div class="front"></div>-->
-            <!--<div class="back"></div>-->
-        <!--</div>-->
-        <!--<div class="card card_to-be-played">-->
-            <!--<div class="front"></div>-->
-            <!--<div class="back"></div>-->
-        <!--</div>-->
-        <!--<div class="card card_to-be-played">-->
-            <!--<div class="front"></div>-->
-            <!--<div class="back"></div>-->
-        <!--</div>-->
-
-        <!--<div class="card card_played">-->
-            <!--<div class="front"></div>-->
-            <!--<div class="back"></div>-->
-        <!--</div>-->
-        <!--<div class="card card_played">-->
-            <!--<div class="front"></div>-->
-            <!--<div class="back"></div>-->
-        <!--</div>-->
-        <!--<div class="card card_played">-->
-            <!--<div class="front"></div>-->
-            <!--<div class="back"></div>-->
-        <!--</div>-->
-        <!--<div class="card card_played">-->
-            <!--<div class="front"></div>-->
-            <!--<div class="back"></div>-->
-        <!--</div>-->
-        <!--<div class="card card_played">-->
-            <!--<div class="front"></div>-->
-            <!--<div class="back"></div>-->
-        <!--</div>-->
-    <!--</div>-->
 </body>
 </html>

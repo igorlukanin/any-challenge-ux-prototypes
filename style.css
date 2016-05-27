@@ -4,7 +4,7 @@ body {
 }
 
 .cards {
-
+    overflow: hidden;
 }
 
 .card__wrapper {
@@ -21,11 +21,11 @@ body {
 }
 
 .card_initial {
-    border-left: solid 10px #c99;
+    border-left: solid 5vw #c99;
 }
 
 .card_to-be-played {
-    border-left: solid 10px #9e9;
+    border-left: solid 5vw #9e9;
 }
 
 .card_played {
