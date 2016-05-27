@@ -95,7 +95,7 @@ body {
 
 .cards_horizontal .card, .cards_horizontal .front, .cards_horizontal .back {
     width: 60vw;
-    height: 85vh;
+    height: 65vh;
 }
 
 .cards_horizontal .card {
