@@ -54,6 +54,10 @@ body {
     z-index: 2;
     /* for firefox 31 */
     transform: rotateY(0deg);
+
+    font: normal 60pt sans-serif;
+    text-align: center;
+    line-height: 3em;
 }
 
 .back {
@@ -84,8 +88,9 @@ body {
     overflow-x: scroll;
     overflow-y: hidden;
     padding-top: 7.5vh;
-    padding-left: 5vw;
+    padding-left: 12.5vw;
     height: 100vh;
+
 }
 
 .cards_horizontal .card__wrapper {

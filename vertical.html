@@ -88,6 +88,11 @@
 </div>
 
 <script>
+    d3.selectAll('.front').text(function(d, i) {
+        return i + 1;
+    });
+
+
     var clazz = 'card_flipped';
 
     d3.selectAll('.card').on('click', function() {

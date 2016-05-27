@@ -88,6 +88,11 @@
 </div>
 
 <script>
+    d3.selectAll('.front').text(function(d, i) {
+        return i + 1;
+    });
+
+
     var clazz = 'card_flipped';
 
     d3.selectAll('.card').on('click', function() {
@@ -95,6 +100,52 @@
         var flipped = card.classed(clazz);
 
         card.classed(clazz, !flipped);
+    });
+
+
+    var scrollTimeout = 50;
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    var wRatio = 0.175;
+
+    var currentCard = 1;
+    var lastScrollPosition = document.getElementsByClassName('cards')[0].scrollLeft;
+    var lastDirection = -1;
+
+    var scroll;
+    var moving = false;
+
+    d3.select('.cards').on('scroll', function() {
+        if (moving) {
+            return;
+        }
+
+        var scrollPosition = document.getElementsByClassName('cards')[0].scrollLeft;
+        var delta = scrollPosition - lastScrollPosition;
+        var direction = delta > 0 ? 1 : -1;
+
+        if (scroll) {
+            clearTimeout(scroll);
+            moving = false;
+        }
+
+        scroll = setTimeout(function() {
+            currentCard += lastDirection;
+            lastDirection = 0;
+
+            moving = true;
+            var card = document.querySelector('.cards .card__wrapper:nth-of-type(' + currentCard + ')');
+
+            setTimeout(function() {
+                moving = false;
+            }, scrollTimeout);
+
+            if (card) {
+                document.querySelector('.cards').scrollLeft = card.offsetLeft - w * wRatio;
+            }
+        }, scrollTimeout);
+
+        lastScrollPosition = scrollPosition;
+        lastDirection = direction;
     });
 </script>
 </body>
