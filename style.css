@@ -18,15 +18,15 @@ body {
 }
 
 .card_initial {
-    border-left: solid 5vw #c99;
+    border-left: solid 2vw #c99;
 }
 
 .card_to-be-played {
-    border-left: solid 5vw #9e9;
+    border-left: solid 2vw #9e9;
 }
 
 .card_played {
-    border-left: solid 5vw #ccc;
+    border-left: solid 2vw #ccc;
 }
 
 .card_flipped {
