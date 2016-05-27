@@ -1,0 +1,101 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+</head>
+<body>
+
+<div class="cards">
+    <div class="card__wrapper">
+        <div class="card card_initial">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_initial">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_initial">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+
+    <div class="card__wrapper">
+        <div class="card card_to-be-played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_to-be-played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_to-be-played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var clazz = 'card_flipped';
+
+    d3.selectAll('.card').on('click', function() {
+        var card = d3.select(this);
+        var flipped = card.classed(clazz);
+
+        card.classed(clazz, !flipped);
+    });
+</script>
+</body>
+</html>
