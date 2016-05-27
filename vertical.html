@@ -1,21 +1,106 @@
 <html>
 <head>
     <link rel="stylesheet" href="style.css"/>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
 </head>
 <body>
 
-<div class="flip-container">
-    <div class="flipper">
-        <div class="front" style="background:#8f8f8f;">
-            <span class="name">David Walsh</span>
+<div class="cards">
+    <div class="card__wrapper">
+        <div class="card card_initial">
+            <div class="front"></div>
+            <div class="back"></div>
         </div>
-        <div class="back" style="background:#f8f8f8;">
-            <div class="back-logo"></div>
-            <div class="back-title">@davidwalshblog</div>
-            <p>Mozilla Web Developer, MooTools &amp; jQuery Consultant, MooTools Core Developer, Javascript Fanatic, CSS Tinkerer, PHP Hacker, and web lover.</p>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_initial">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_initial">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+
+    <div class="card__wrapper">
+        <div class="card card_to-be-played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_to-be-played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_to-be-played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_played">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+    <div class="card__wrapper">
+        <div class="card card_played">
+            <div class="front"></div>
+            <div class="back"></div>
         </div>
     </div>
 </div>
+
+<script>
+    var clazz = 'card_flipped';
+
+    d3.selectAll('.card').on('click', function() {
+        var card = d3.select(this);
+        var flipped = card.classed(clazz);
+
+        d3.selectAll('.card').classed(clazz, false);
+
+        if (!flipped) {
+            card.classed(clazz, true);
+        }
+    });
+</script>
 
     <!--<div class="cards">-->
         <!--<div class="card card_initial">-->
